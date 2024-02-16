@@ -1,0 +1,42 @@
+.selectContainer {
+	position: relative;
+	display: block;
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+.select {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 15px;
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+    background: #e6e6e6;
+    color: #7b7b7b;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.select:hover,
+.select:focus {
+	color: #000;
+	background: #ccc;
+}
+.selectArrow {
+	position: absolute;
+	top: 16px;
+	right: 15px;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+	border-style: solid;
+	border-width: 8px 5px 0 5px;
+	border-color: #7b7b7b transparent transparent transparent;
+}
+.select:hover ~ .selectArow,
+.select:focus ~ .selectArrow {
+	border-top-color: #000;
+}
