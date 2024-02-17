@@ -22,10 +22,19 @@ const port = 4000;
 app.use(cors());
 
 app.get('/api/advisors', (req, res) => {
-  const offset = Number(req.query.offset) || 0; 
-  const advisors = generateAdvisors(50, offset);
-  
-  res.json(advisors);
+  try {
+    const offset = Number(req.query.offset) || 0; 
+    const advisors = generateAdvisors(50, offset);
+    
+    res.json(advisors);
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('An error occurred!');
 });
 
 app.listen(port, () => {

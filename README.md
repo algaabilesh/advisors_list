@@ -122,6 +122,16 @@ Accessibility options, such as aria-label attributes and roles, are currently no
 
 It should be noted that this project was a testing app, and the decisions made reflect that.
 
+## Error Handling
+
+Currently, the server-side code implements simple error handling that just logs the error stack trace and returns a 500 server error response. There's no client-side error handling integrated in the application at this point, which means all server errors manifest as network errors to the client.
+
+### Future Improvements
+
+A more robust server error handling system could include differentiated responses based on error type, possibly with associated HTTP status codes which are representative of the type of error (Validation, Authentication, etc.). In addition, client-side error handling could be greatly improved by providing feedback to the user when errors occur. This can be as simple as an alert, or as complex as form validation error messages.
+
+As the application grows and the complexity increases, these improvements will provide better user experience and more maintainability.
+
 ## References
 
 The project was influenced and guided by several resources. Specifically:
