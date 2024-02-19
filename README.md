@@ -4,6 +4,16 @@
 
 This project was bootstrapped with Create Next App. It uses Next.js, TypeScript and Storybook which are great tools to help you build React applications faster.
 
+## Prerequisites
+
+Before running this project, ensure you have the following installed:
+
+- Node.js: This project requires Node.js version 14 or later. You can download Node.js from the [official website](https://nodejs.org/). To check your Node.js version, run the following command in your terminal:
+
+```bash
+node -v
+```
+
 ## Installation
 
 First step is clone the repository and install the dependencies:
